@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+<div id='container'></div>
+<script type='text/javascript' src="https://fluentcx-mymacromedia.cs84.force.com/boonanappointment/lightning/lightning.out.js"></script>
+<script type='text/javascript'>
+
+    $Lightning.use("c:embeddedFlowApp",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+        
+            $Lightning.createComponent(
+                "c:embeddedFlow", // top-level component of your app
+                 {
+                    name : "hostSite",
+                    type : "String",
+                    value: document.location.href
+                },                  // attributes to set on the component when created
+                "rexcontainer",   // the DOM location to insert the component
+                function(cmp) { // callback when component is created and active on the page
+                }
+            );
+        },
+        'https://fluentcx-mymacromedia.cs84.force.com/boonanappointment'  // Experience Cloud site endpoint
+    );
+</script>
+    <h2>REX COntainer</h2>
+    <div id="rexcontainer" name="rexcontainer">
+    </div>
+    
+    
+        <script>
+        $Lightning.use("c:embeddedFlowApp",
+            function() {
+            
+            var inputVariables = [
+                {
+                    name : "hostSite",
+                    type : "String",
+                    value: 'this'
+                }
+            ];
+            // Callback once framework and app load
+                $Lightning.createComponent(
+                    "c:embeddedFlow",    // top-level component of your app
+                    {
+                    
+                    },    // attributes to set on the component when created
+                    "lexcontainer",    // the DOM location to insert the component
+                    function(component) { // API name of the Flow
+                       // component.startFlow("Create_A_New_Case",inputVariables);
+                    }
+                );
+            },    'https://fluentcx-mymacromedia.cs84.force.com/boonanappointment'  // Site endpoint
+        );
+    </script>
+    
+    
+    <h2>LEX COntainer</h2>
+    <div id="lexcontainer" name="lexcontainer">
+    </div>
+</body>
+</html>
+
