@@ -4,25 +4,12 @@
 <title>Page Title</title>
 </head>
 <body>
-
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
-
+    
 <script type='text/javascript' src="https://fluentcx-mymacromedia.cs84.force.com/boonanappointment/lightning/lightning.out.js"></script>   
     
     <script>
         $Lightning.use("c:embeddedFlowApp",
-            function() {
-            
-            var inputVariables = [
-                {
-                    name : "hostSite",
-                    type : "String",
-                    value: document.location.href
-                }
-            ];
-            // Callback once framework and app load
+            function() {// Callback once framework and app load
                 $Lightning.createComponent(
                     "c:embeddedFlow",    // top-level component of your app
                     {
@@ -39,9 +26,12 @@
     </script>
     
     
-    <h2>LEX COntainer</h2>
+    <h1>This is an Integration Test from Salesforce to External Websites</h1>    
+<h2>Inbound Guest Appointment | Lightning Scheduler</h2>
+
     <div id="inboundnewguestappointment" name="inboundnewguestappointment">
     </div>
+    
 </body>
 </html>
 
