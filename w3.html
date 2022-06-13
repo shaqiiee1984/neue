@@ -13,12 +13,16 @@
 <script type='text/javascript'>
     $Lightning.use("c:embeddedFlowApp",    // name of the Lightning app
         function() {                  // Callback once framework and app loaded
+        var inputVariables = [
+            {
+                name : "hostSite",
+                type : "String",
+                value: document.location.href
+            }
+        ];
             $Lightning.createComponent(
                 "c:embeddedFlow", // top-level component of your app
-                {  name : "hostSite",
-                        type : "String",
-                        value: 'this is my Brand Too!'
-                },                  // attributes to set on the component when created
+                inputVariables,                  // attributes to set on the component when created
                 "rexcontainer",   // the DOM location to insert the component
                 function(cmp) { // callback when component is created and active on the page
                 }
