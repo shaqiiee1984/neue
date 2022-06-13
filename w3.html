@@ -22,10 +22,36 @@ function init(){
                 }
             );
         },
-        'https://sam1984-developer-edition.eu44.force.com/embeddedflow/'  // Experience Cloud site endpoint
+        'https://sam1984-developer-edition.eu44.force.com/embeddedflow'  // Experience Cloud site endpoint
     );
     }
+    
+    
 </script>
+    
+        <script>
+        $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
+            function() {
+            // Callback once framework and app load
+                $Lightning.createComponent(
+                    "lightning:flow",    // top-level component of your app
+                    {
+                        hostLanguage:'DE',
+                        hostSite:'Github.com'
+                    },    // attributes to set on the component when created
+                    "lexcontainer",    // the DOM location to insert the component
+                    function(component) { // API name of the Flow
+                        component.startFlow("Create_A_New_Case");
+                    }
+                );
+            },    'https://sam1984-developer-edition.eu44.force.com/embeddedflow'  // Site endpoint
+        );
+    </script>
+    
+    <h1>This is an Integration Test from Salesforce to External Websites</h1>    
+    <h2>Inbound Guest Appointment | Lightning Scheduler</h2>
+    <div id="lexcontainer" name="lexcontainer">
+    </div>
 </body>
 </html>
 
