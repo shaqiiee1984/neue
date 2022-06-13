@@ -36,8 +36,9 @@
                 $Lightning.createComponent(
                     "c:embeddedFlow",    // top-level component of your app
                     {
-                        hostLanguage:'DE',
-                        hostSite:'Github.com'
+                        name : "hostSite",
+                        type : "String",
+                        value: 'this is my Brand Too!'
                     },    // attributes to set on the component when created
                     "lexcontainer",    // the DOM location to insert the component
                     function(component) { // API name of the Flow
