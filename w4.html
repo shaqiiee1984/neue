@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-    
-<script type='text/javascript' src="https://fluentcx-mymacromedia.cs84.force.com/boonanappointment/lightning/lightning.out.js"></script>   
-    
-    <script>
-        $Lightning.use("c:embeddedFlowApp",
-            function() {// Callback once framework and app load
-                $Lightning.createComponent(
-                    "c:embeddedFlow",    // top-level component of your app
-                    {
-                        name : "hostSite",
-                        type : "String",
-                        value: 'this is my Brand Too!'
-                    },    // attributes to set on the component when created
-                    "inboundnewguestappointment",    // the DOM location to insert the component
-                    function(component) { // API name of the Flow                        
-                    }
-                );
-            },    'https://fluentcx-mymacromedia.cs84.force.com/boonanappointment'  // Site endpoint
-        );
-    </script>
-    
-    
-    <h1>This is an Integration Test from Salesforce to External Websites</h1>    
-<h2>Inbound Guest Appointment | Lightning Scheduler</h2>
-
-    <div id="inboundnewguestappointment" name="inboundnewguestappointment">
-    </div>
-    
-</body>
+   <head>
+      <title>Page Title</title>
+   </head>
+   <body>
+      <h1>This is an Integration Test from Salesforce to External Websites</h1>
+      <h2>Inbound Guest Appointment | Lightning Scheduler</h2>
+      <script type='text/javascript' src="https://fluentcx-mymacromedia.cs84.force.com/boonanappointment/lightning/lightning.out.js"></script>   
+      <script>
+         $Lightning.use("c:embeddedFlowApp",
+             function() {// Callback once framework and app load
+                 $Lightning.createComponent(
+                     "c:embeddedFlow",    // top-level component of your app
+                     {
+                         name : "hostSite",
+                         type : "String",
+                         value: 'this is my Brand Too!'
+                     },    // attributes to set on the component when created
+                     "inboundnewguestappointment",    // the DOM location to insert the component
+                     function(component) { // API name of the Flow                        
+                     }
+                 );
+             },    'https://fluentcx-mymacromedia.cs84.force.com/boonanappointment'  // Site endpoint
+         );
+      </script>
+      <div id="inboundnewguestappointment" name="inboundnewguestappointment">
+      </div>
+   </body>
 </html>
-
