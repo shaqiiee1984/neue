@@ -5,6 +5,8 @@
 
       <!-- 1. Add Script to Header Tag -->
       <script type='text/javascript' src="https://fluentcx-mymacromedia.cs84.force.com/boonanappointment/lightning/lightning.out.js"></script>   
+	   
+	<!-- 2. Add Attributes and inform your salesforce Team to include them in Lightning Scheduler -->	   
 	<script type='text/javascript'>	   
 		let hostSiteLanguage = 'fr';
 		let hostSiteName = 'www.MacroMediaSiteURL.com';
@@ -17,7 +19,7 @@
       <h2>Inbound Guest Appointment | Lightning Scheduler</h2>      
 	  
 	  
-      <!-- 2. Use this Script alongwith other javascript Code -->     
+      <!-- 3. Use this Script alongwith other javascript Code -->     
       <script>
          $Lightning.use("c:embeddedFlowApp",
              function() {
@@ -31,12 +33,10 @@
              },    'https://fluentcx-mymacromedia.cs84.force.com/boonanappointment'  // Site endpoint
          );
       </script>
-	  
 
-
-	  <!-- 3. Define an Element where the Appointment Scheduler should be displayed -->
-      <div id="macromediaterminplanner">
-      </div>
+	<!-- 4. Define an Element where the Appointment Scheduler should be displayed -->
+	<div id="macromediaterminplanner">
+	</div>
 	  
 	  
 	  
